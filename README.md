@@ -27,4 +27,4 @@ An item has the same weight, fat content, and type. But, two different items can
 6. I tried first a NN with one hidden layer only (of 500 neurons). I tried different activation functions and got negative prediction which is why I applied a custom loss function. The latter lowered the number of test data points whose predictions were negative, but didn't solve the whole problem.
 7. I tried another NN with two hidden layers (500 and 100) which gave acceptable results namely, a loss of ~1300 on the public part of the test_data.
 8. I tried the latter NN using only the Item_Id and Outlet_Identifier which gave much better results: ~ 1158 loss on the public part of the test_data.
-9. No overfitting observed in both neural nets I tried.
+9. No overfitting observed in neither neural nets I tried.
