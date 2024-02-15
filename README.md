@@ -13,8 +13,7 @@ hackathon website so training set and test set are already split.
 | ---------|----------|
 | Item_Identifier | Unique product ID | 
 | Item_Weight | Weight of product | 
-| Item_Fat_Content | Whether the product is low fat or not |
-	
+| Item_Fat_Content | Whether the product is low fat or not |	
 | Item_Visibility | The % of total display area of all products in a store allocated to the particular product |
 | Item_Type | The category to which the product belongs |
 | Item_MRP | Maximum Retail Price (list price) of the product |
@@ -29,7 +28,7 @@ hackathon website so training set and test set are already split.
 
 <details>
 <summary>Key moments or notes about preprocessing: </summary>
-Look for Mardown cells that start with "idea" or "Thinking moment" or "question".
+Look for Mardown cells that start with "idea" or "Thinking moment" or "question". <br/>
 1. **Important observations about the data:** The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
 An item always has the same weight, fat content, and type. But, two different items can still have the same weight. The weight, fat content, and item type can (almost) uniquely identify an item (there are ~200 items that can't be identified using those 3 pieces of information). <br/>
 The problem really boils down to predicting sales for a specific product in a specific outlet. <br/>
