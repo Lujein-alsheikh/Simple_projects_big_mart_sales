@@ -29,17 +29,17 @@ hackathon website so training set and test set are already split.
 <details>
 <summary>Key moments or notes about preprocessing: </summary>
 Look for Mardown cells that start with "idea" or "Thinking moment" or "question". <br/>
-1. <strong>Important observations about the data:</strong> The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
++ <strong>Important observations about the data:</strong> The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
 An item always has the same weight, fat content, and type. But, two different items can still have the same weight. The weight, fat content, and item type can (almost) uniquely identify an item (there are ~200 items that can't be identified using those 3 pieces of information). <br/>
 The problem really boils down to predicting sales for a specific product in a specific outlet. <br/>
 I tried using only the item ids and outlet id's and got good results. 
-2. **Should we keep the Item_Identifier column? Does it not cause leakage?** Some items have similar sales across different outliers and some don't. There is no (immediate) leakage. I kept this column. Some contestants removed it and with different preprocessing methods than mine still got good results though.
-3. **How to encode the Item_Identifier column that has 1559 different categories?** The library category_encoders comes in handy. I used binary encoding and was able to encode 1559 values using 11 columns only.
-4.**Creating a model to predict missing values of the "Outlet_Size" column:** (I didn't try it): If we want to create a model to predict the missing values of "Outlet_Size", we can not use the original target variable as a feature because it causes data leakage. Another important question would be how to assess the accuracy of the predictions if there are no ground truth values to compare with? 
-5. **Weird performance from Python: df.groupby('Item_Identifier')['Item_Weight'].mean() gives strange results.** For example, instead of returning 4.59 it returns 4.58999999. Another example, instead of returning 6.52 it returns 6.5200000005. I need that df.groupby('Item_Identifier')['Item_Weight'].mean() returns exactly the same values as in the dataset. I rounded the output.
-6. **Note about encoding:** When applying binary encoding on item_ids, we have to .fit_transform on the whole dataset because we need the coding to be consistent.
-7. **Downside of one-hot-encoding:** that the data becomes sparse. Some models might not work well with sparse data. I apply one-hot-encoding on two columns Item_Type and Outlet_Identifier and end up with 21 columns which is acceptable in my case.
-8. **Other ideas for encoding:** frequency encoding or target encoding. Caution that target encoding leads to leakage.
++ <strong>Should we keep the Item_Identifier column? Does it not cause leakage?<strong> Some items have similar sales across different outliers and some don't. There is no (immediate) leakage. I kept this column. Some contestants removed it and with different preprocessing methods than mine still got good results though.
++ <strong>How to encode the Item_Identifier column that has 1559 different categories?<strong> The library category_encoders comes in handy. I used binary encoding and was able to encode 1559 values using 11 columns only.
++ <strong>Creating a model to predict missing values of the "Outlet_Size" column:<strong> (I didn't try it): If we want to create a model to predict the missing values of "Outlet_Size", we can not use the original target variable as a feature because it causes data leakage. Another important question would be how to assess the accuracy of the predictions if there are no ground truth values to compare with? 
++ <strong>Weird performance from Python: df.groupby('Item_Identifier')['Item_Weight'].mean() gives strange results.<strong> For example, instead of returning 4.59 it returns 4.58999999. Another example, instead of returning 6.52 it returns 6.5200000005. I need that df.groupby('Item_Identifier')['Item_Weight'].mean() returns exactly the same values as in the dataset. I rounded the output.
++ <strong>Note about encoding:<strong> When applying binary encoding on item_ids, we have to .fit_transform on the whole dataset because we need the coding to be consistent.
++ <strong>Downside of one-hot-encoding:<strong> that the data becomes sparse. Some models might not work well with sparse data. I apply one-hot-encoding on two columns Item_Type and Outlet_Identifier and end up with 21 columns which is acceptable in my case.
++ <strong>Other ideas for encoding:<strong> frequency encoding or target encoding. Caution that target encoding leads to leakage.
 </details>
 
 <details>
