@@ -56,10 +56,10 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 | ---------|----------|----------|
 | Item_Identifier | 1559 unique values | binary encoding |
 | Item_Weight | float | filled in missing values easily since each item has the same weight and the same item is repeated many times |
-| Item_Fat_Content | | label encoding |
-| Item_Visibility | float | |
+| Item_Fat_Content | - | label encoding |
+| Item_Visibility | float | - |
 | Item_Type | 16 categories | grouping sparse categories and then one-hot-encoding. We end up with 11 categories |
-| Item_MRP | float | |
+| Item_MRP | float | - |
 | Outlet_Identifier | 10 categories | one-hot-encoding |
 | Outlet_Establishment_Year | int | I treated it as numerical value even though it is discrete |
 | Outlet_Size | 3 categories: small, medium, and high | missing values for outlets 10, 45, and 17. I fill them in with the mode (Medium) |
