@@ -52,6 +52,7 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 
 <details>
 <summary>Summary of how I preprocessed each column</summary>
+
 | Column | info about this column | How to preprocess it? |
 | ---------|----------|----------|
 | Item_Identifier | 1559 unique values | binary encoding |
