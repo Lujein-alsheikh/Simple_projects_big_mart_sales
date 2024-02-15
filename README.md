@@ -70,6 +70,7 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 
 <details>
 <summary>Outlets information</summary>
+
 | Outlet_Identifier | Establishment_Year | Outlet_Size | Location_Type | Outlet_Type |
 | ---------|----------|----------|----------|----------|
 | 049 | 1999 | Medium | tier 1 | Supermarket Type 1 |
