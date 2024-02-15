@@ -29,7 +29,7 @@ hackathon website so training set and test set are already split.
 <details>
 <summary>Key moments or notes about preprocessing: </summary>
 Look for Mardown cells that start with "idea" or "Thinking moment" or "question". <br/>
-**1. Important observations about the data:** The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
+1. __Important observations about the data:__ The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
 An item always has the same weight, fat content, and type. But, two different items can still have the same weight. The weight, fat content, and item type can (almost) uniquely identify an item (there are ~200 items that can't be identified using those 3 pieces of information). <br/>
 The problem really boils down to predicting sales for a specific product in a specific outlet. <br/>
 I tried using only the item ids and outlet id's and got good results. 
