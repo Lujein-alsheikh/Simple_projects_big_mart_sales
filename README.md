@@ -85,6 +85,18 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 | 019 | 1985 | Small | tier 1 | Grocery Store | 
 </details>
 
+
+<details>
+<summary>Hypotheses testing</>
+
++ $H_{0}$: the average of meat sales equals the average of seafood sales. Test used: anova. Result: Fail to reject the null hypothesis. However, the result of this test is not reliable because not all requirements are met. More precisely, one requirement for anova is that the population standard deviations of all groups should all be equal. In reality, we don't know if this is true or not. Another requirement is that the distributions should be Gaussian which is clearly not the case. Another factor is the sizes of the groups. The seafood group is very small. </br>
+
++ Pair-wise t-tests of sales with respect to item types. Example from the results: there is a difference between the dairy and softdrinks groups. There is no difference between the dairy and seafood groups and there is no difference between the softdrinks and seafood groups. This inconsistency is due to the fact that the seafood group is very small.<br/>
+
++ For each item type whether there is a significant difference between the averages of its sales across the three different outlet locations (tiers) using anova. </br>
+
+</details>
+
 <details>
 <summary>Building the NN and judging the performance and results</summary>
 
