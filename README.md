@@ -87,23 +87,23 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 
 <details>
 <summary>Building the NN and judging the performance and results</summary>
-+ I tried first a NN with one hidden layer only (of 500 neurons). I tried different activation functions and got negative prediction which is why I applied a custom loss function. The latter lowered the number of test data points whose predictions were negative when the activation function was leaky relu. When the activation function was relu, the custom function actually increased the number of negatively predicted values. Anyhow, adding a custom loss function didn't solve the problem. Conclusion: the baseline model does not work. <br/>
-+ I tried another NN with two hidden layers (500 and 100) which gave acceptable results namely, a loss of ~1300 on the public part of the test_data (on the analytics vidhya hackathon platform). <br/>
-+ I tried the latter NN using only the Item_Id and Outlet_Identifier which gave much better results: ~ 1158 loss on the public part of the test_data. <br/>
-+ No overfitting observed in neither neural nets I tried.
+- I tried first a NN with one hidden layer only (of 500 neurons). I tried different activation functions and got negative prediction which is why I applied a custom loss function. The latter lowered the number of test data points whose predictions were negative when the activation function was leaky relu. When the activation function was relu, the custom function actually increased the number of negatively predicted values. Anyhow, adding a custom loss function didn't solve the problem. Conclusion: the baseline model does not work. <br/>
+- I tried another NN with two hidden layers (500 and 100) which gave acceptable results namely, a loss of ~1300 on the public part of the test_data (on the analytics vidhya hackathon platform). <br/>
+- I tried the latter NN using only the Item_Id and Outlet_Identifier which gave much better results: ~ 1158 loss on the public part of the test_data. <br/>
+- No overfitting observed in neither neural nets I tried.
 </details>
 
 <details>
 <summary>Explaining the content of the .csv files</summary>
-+ "submission_data.csv" has the output of the first NN. <br/>
-+ "submission_data_3.csv" has the output of the same NN using Item_Identier, Outlet_Identifier, visibility, and mrp as features only. <br/>
-+ "output_file.csv" has the result of df.groupby('Item_Identifier')['Item_Weight']
+- "submission_data.csv" has the output of the first NN. <br/>
+- "submission_data_3.csv" has the output of the same NN using Item_Identier, Outlet_Identifier, visibility, and mrp as features only. <br/>
+- "output_file.csv" has the result of df.groupby('Item_Identifier')['Item_Weight']
 </details>
 
 <details>
 <summary>Points to investigate further</summary>
-+ Why did the baseline NN including varying the activation function give negative predictions? Where do they come from? <br/>
-+ In the baseline NN, why does using sigmoid and tanh predict the same value for all test points? <br/>
+- Why did the baseline NN including varying the activation function give negative predictions? Where do they come from? <br/>
+- In the baseline NN, why does using sigmoid and tanh predict the same value for all test points? <br/>
 </details>
 
 <details>
