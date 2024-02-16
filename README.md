@@ -102,8 +102,8 @@ I tried using only the item ids and outlet id's and got good results. <br/>
 
 <details>
 <summary>Points to investigate further</summary>
-- Why did the baseline NN including varying the activation function give negative predictions? Where do they come from? <br/>
-- In the baseline NN, why does using sigmoid and tanh predict the same value for all test points? <br/>
+* Why did the baseline NN including varying the activation function give negative predictions? Where do they come from? <br/>
+* In the baseline NN, why does using sigmoid and tanh predict the same value for all test points? <br/>
 </details>
 
 <details>
