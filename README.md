@@ -7,7 +7,7 @@ hackathon website so training set and test set are already split.
 </details>
 
 <details>
-<summary>The features are:</summary>
+<summary>The features are</summary>
 
 | Column | Description | 
 | ---------|----------|
@@ -27,7 +27,7 @@ hackathon website so training set and test set are already split.
 
 
 <details>
-<summary>Key moments or notes about preprocessing: </summary>
+<summary>Key moments or notes about preprocessing </summary>
 Look for cells that start with "idea" or "Thinking moment" or "question". <br/>
 
 + <strong>Important observations about the data:</strong> The same outlet always has the same establishment year, size, location type, and type. Those columns are redundant. <br/>
